@@ -38,14 +38,26 @@ img {
 .logo_part {
   float: left;
   margin: 20px;
+  width: 300px;
+
 }
 /* NAvigation Section */
 nav {
   float: right;
+ 
+  width:50%;
+
 }
 nav li {
   float: right;
   list-style: none;
+}
+.container1{
+  display: flex;
+  width:100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 .container {
   width: 100%;
@@ -61,6 +73,59 @@ nav ul li a {
 nav ul li a:hover {
   color: rgb(26, 188, 156);
 }
+
+.menu{
+  width:100px;
+  height:45px;
+  background:rgb(26, 188, 156);
+  padding: 0 12px;
+  border-radius:5px;
+  text-align:center;
+  font-family:sans-serif;
+  position: relative;
+  cursor:pointer;
+  display:none;
+  
+}
+
+
+.menu:hover .inside-list{
+  display:block;
+}
+.inside-list{
+  position: absolute;
+  top:52px;
+  left:-30px;
+  width:auto;
+  background:whitesmoke;
+  transition:all 0.2s ease-in-out;
+  border-radius:5px;
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.2);
+  display:none;
+}
+
+
+.navigation2{
+  list-style:none;
+  
+}
+.navigation2 li {
+  border-bottom:1px solid lightgrey;
+  padding:17px 35px;
+  border-radius:5px;
+  cursor:pointer;
+   transition:all 1s ease-in-out;
+}
+
+.navigation2 li:hover {
+  background:rgb(26, 188, 156);
+  color:white;
+  
+}
+.navigation2 li a{
+  color:#595959;
+}
+
 /* Banner Section */
 .banner {
   min-height: 600px;
@@ -136,7 +201,46 @@ p {
   text-align: center;
   color:#263f4e;
   margin-top: 34px;
+ animation: expand 1s linear 1s infinite; 
+  
+}
 
+@keyframes expand{
+   0%{
+     letter-spacing:0px;
+    
+  }
+  10%{
+    letter-spacing:2px;
+  }
+  20%{
+    letter-spacing:4px;
+  }
+  30%{
+    letter-spacing:6px;
+  }
+  40%{
+    letter-spacing:8px;
+  }
+  50%{
+    letter-spacing:10px;
+  }
+  60%{
+    letter-spacing:8px;
+  }
+  70%{
+    letter-spacing:6px;
+  }
+  80%{
+    letter-spacing:4px;
+  }
+  90%{
+    letter-spacing:2px;
+  }
+  100%{
+    letter-spacing:0px;
+  }
+  
 }
 .col-4 {
   width: 33.33%;
@@ -189,6 +293,46 @@ p {
   color: white;
   padding: 0;
   margin-top: 70px;
+ animation: expand 1s linear 1s infinite; 
+  
+}
+
+@keyframes expand{
+   0%{
+     letter-spacing:0px;
+    
+  }
+  10%{
+    letter-spacing:2px;
+  }
+  20%{
+    letter-spacing:4px;
+  }
+  30%{
+    letter-spacing:6px;
+  }
+  40%{
+    letter-spacing:8px;
+  }
+  50%{
+    letter-spacing:10px;
+  }
+  60%{
+    letter-spacing:8px;
+  }
+  70%{
+    letter-spacing:6px;
+  }
+  80%{
+    letter-spacing:4px;
+  }
+  90%{
+    letter-spacing:2px;
+  }
+  100%{
+    letter-spacing:0px;
+  }
+  
 }
 .col-2{
   width:50%;
@@ -224,7 +368,6 @@ p {
 }
 .button1:hover{
   animation: myanime 1s linear alternate;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 @keyframes myanime {
@@ -247,7 +390,7 @@ p {
   padding: 20px;
   border: none;
   outline: none;
-  border-bottom: 1px solid gray;
+  border-bottom: 2px solid gray;
   margin: 10px;
   resize: none;
   font-weight: 600;
@@ -396,6 +539,10 @@ footer .row{
     .logo_part a{
         padding-left:10px; 
     }
+    .menu{
+  display:block;
+
+    }
 
     .banner_content h1
     {
@@ -443,41 +590,6 @@ footer .row{
     }
     .ft-3 p{
         text-align: center;
-    }
-
-    .hams {
-        display:block;
-        position:absolute;
-        right:20px;
-        top:15px;
-        padding:5px 10px;
-        background-color: white;
-    }
-   
-    .hams:hover+nav{
-        display:block;
-        /* border:1px solid white; */
-        position:absolute;
-        top:60px;
-        width:100%;
-       
-    }
-
-    .hams+nav ul{
-        float:left;
-        width:100%;
-    }
-    .hams+nav ul li {
-        float:left;
-        width:100%;
-    }
-    .hams+nav ul li a{
-        width:100%;
-        background-color:#022235 ;
-    }
-    .hams+nav ul li a:hover{
-        color:black;
-        background-color:white;
     }
 
 }
